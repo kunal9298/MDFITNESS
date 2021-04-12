@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.gotopbtn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: gold;
+  bottom: 50px;
+  right: 15px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  font-size: 22px;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out
+}
+
+.gotopbtn:hover {
+  color: black;
+}
+
+.gotopbtn2 {
+  position: fixed;
+  width: 50px;
+  z-index: 1;
+  height: 50px;
+  bottom: 110px;
+  right: 15px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color: #25D366;
+  font-size: 40px;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out
+}
+
+.gotopbtn2:hover {
+  color: #25D366;
+}
+/* Navigation */
+/* .navbar {
+    z-index: 1;
+    
+}
+.navbar-nav li a {
+    color: #fff !important;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 2px;
+    font-size: 25px;
+    transition: 0.50s;
+}
+
+.navbar-nav li a:hover {
+    color: gold !important;
+}
+.navbar-brand {
+    color: #fff !important;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+} */
+
+/* Navigation */
+/* custom scroll bar */
+
+.navbar-1{
+  position: fixed;
+  width: 100%;
+  z-index: 41;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+.navbar-1.sticky{
+  background: #1b1b1b;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  transition: 0.3s ease-in-out;
+}
+.navbar-1.sticky .logo img{
+  width: 70px;
+}
+
+.navbar-1 .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-1 .menu-list{
+  display: inline-flex;
+}
+.menu-list li{
+  list-style: none;
+  font-family: 'Teko', sans-serif;
+  letter-spacing:2px;
+  margin-top: 20px;
+  
+}
+.menu-list li a{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color: gold
+}
+
+.icon{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 868px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar-1 .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #222;
+    transition: all 0.3s ease;
+  }
+  .navbar-1.show .menu-list{
+    left: 0%;
+  }
+  .navbar-1 .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar-1 .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar-1.show .menu-list li a{
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+       
+  .logo img {
+      transition: 0.3s ease-in-out;
+  }
+  .navbar-1 .logo img{
+      width: 70px;
+      margin: 0px;
+      padding: 0px; 
+
+  }
+  } 
+
+/* About us */
+.g-us {
+    position: relative;
+}
+.g-img {
+  background-image: url('../images/bgbanner.jpg');
+  height: 350px;
+  background-size: cover;
+  background-position: center center;
+  display: table;
+  width: 100%;
+}
+
+.g-img::after {
+  content: '';
+  display: table;
+  height: 350px;
+  width: 100%;
+  background: rgba(0,0,0,0.6) !important
+}
+
+.g-content h1{
+  position: absolute;
+  top: 50%;
+  font-family: 'Teko', sans-serif;
+  font-size: 80px;
+  font-weight: 700 !important;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  letter-spacing: 3px;
+}
+
+.g-content p{
+  position: absolute;
+  top: 75%;
+  color: #fff;
+  font-size: 23px;
+  font-family: 'Teko', sans-serif;
+  letter-spacing: 3px
+}
+
+@media only screen and (max-width:767px) {
+  .g-img {
+    height: 300px !important;
+  }
+
+  .g-img::after {
+    content: '';
+    display: table;
+    height: 300px;
+}
+
+.g-content h1{
+  top: 55%;
+  font-size: 50px;
+}
+
+.g-content p{
+  top: 75%;
+  font-size: 23px;
+}
+}
+
+
+/* Gallery */
+
+.gallery {
+    margin-top: 100px
+}
+
+.g-text p {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    color: gold;
+    font-size: 23px;
+    letter-spacing: 3px;
+    font-weight: bolder;
+}
+.g-text h5 {
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    font-size: 66px;
+    font-weight: bolder;
+    color: #000;
+}
+
+img.art {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 1s;
+    opacity: 0.7;
+}
+
+.thumb {
+    overflow: hidden;
+}
+
+img.art:hover {
+        transform: scale(1.2);
+        opacity: 1;
+}
+
+
+@media only screen and (max-width:767px) {
+    .g-text h5 {
+        font-family: 'Teko', sans-serif;
+        text-transform: uppercase;
+        font-size: 35px;
+        font-weight: bolder;
+        color: #000;
+        }
+    }
+
+/* Footer */
+.footer {
+  margin-top: 100px;
+  background-color:  #0b0b0b;
+  padding: 60px 0px 0px 8px;
+
+}
+
+.footer-text h3 {
+  font-family: 'Teko', sans-serif;
+  color: gold;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+.footer-info {
+  margin-bottom: 40px;
+  
+}
+.i-icon{
+  color: gold;
+  padding-right: 10px;
+  font-size: 18px;
+}
+.footer-info li {
+  list-style: none;
+  color: #fff;
+  padding: 10px 0px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 400px;
+  letter-spacing: 1px;
+}
+
+.footer-end {
+  text-align: center;
+  background: #1e1e1e;
+  letter-spacing: 2px;
+  padding: 8px;
+}
+.footer-icon i{
+  color: #fff;
+  font-size: 20px; 
+  cursor: pointer;
+}
+
+
+.footer-icon i:hover{
+  color: gold;
+}
+.footer-end p {
+  margin: 3px !important;
+  font-size: 12px
+}
+
